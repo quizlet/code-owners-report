@@ -33,7 +33,7 @@ const measureFile = async (
 export default async function measureFileTree(
   dir: string,
   spec: ReportSpec,
-  ignoredPaths: string[],
+  ignoredPaths: RegExp[],
 ): Promise<FilesMetricsMap> {
   console.log(ignoredPaths)
   console.log('Measuring directory', dir)

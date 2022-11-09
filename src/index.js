@@ -17,7 +17,7 @@ export type CodeReport = {
 export const generateReport = async (
   basedirOpt: string[] | string,
   reportSpec: ReportSpec,
-  ignores?: string[] = [],
+  ignores?: RegExp[] = [],
   codeownersPath?: string,
 ): Promise<CodeReport> => {
   console.log({ignores})
