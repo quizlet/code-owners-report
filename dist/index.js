@@ -40,7 +40,6 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
  */
 const generateReport = exports.generateReport = (() => {
   var _ref = _asyncToGenerator(function* (basedirOpt, reportSpec, ignores = [], codeownersPath) {
-    console.log({ ignores });
     const ownerEntries = codeownersPath ? (0, _codeowners.parseCodeownersFile)(codeownersPath) : null;
 
     const basedirs = Array.isArray(basedirOpt) ? basedirOpt : [basedirOpt];

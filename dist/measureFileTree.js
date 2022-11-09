@@ -44,7 +44,6 @@ const measureFile = (() => {
 
 exports.default = (() => {
   var _ref2 = _asyncToGenerator(function* (dir, spec, ignoredPaths) {
-    console.log(ignoredPaths);
     console.log('Measuring directory', dir);
 
     const metrics = {};
@@ -55,7 +54,6 @@ exports.default = (() => {
         return filename.match(filepath);
       });
     });
-    console.log({ files });
     // Revisit this if perf is an issue.
     var _iteratorNormalCompletion = true;
     var _didIteratorError = false;

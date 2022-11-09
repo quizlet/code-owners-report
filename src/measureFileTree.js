@@ -35,14 +35,12 @@ export default async function measureFileTree(
   spec: ReportSpec,
   ignoredPaths: RegExp[],
 ): Promise<FilesMetricsMap> {
-  console.log(ignoredPaths)
   console.log('Measuring directory', dir)
 
   const metrics: FilesMetricsMap = {}
 
   // consider https://github.com/jergason/recursive-readdir
   const files = (fs.readdirSync(dir) || []).filter(filename => !ignoredPaths.some(filepath => filename.match(filepath)));
-  console.log({files})
   // Revisit this if perf is an issue.
   for (const file of files) {
     const subpath = `${dir}/${file}`

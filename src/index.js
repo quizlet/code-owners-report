@@ -20,7 +20,6 @@ export const generateReport = async (
   ignores?: RegExp[] = [],
   codeownersPath?: string,
 ): Promise<CodeReport> => {
-  console.log({ignores})
   const ownerEntries = codeownersPath
     ? parseCodeownersFile(codeownersPath)
     : null
